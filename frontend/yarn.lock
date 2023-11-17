@@ -2143,6 +2143,13 @@
     semver "^7.3.8"
     superstruct "^1.0.3"
 
+"@monerium/sdk@^2.3.0":
+  version "2.7.3"
+  resolved "https://registry.yarnpkg.com/@monerium/sdk/-/sdk-2.7.3.tgz#8d5bf73867af478e2515e1a220c2b2afd5e01763"
+  integrity sha512-sjPXyGJenk7sRVfSiHQayG98agaj0lpe6aMAM8xT+av3QeLRpVGs92OAnz67UUCkE3tKrZBg57Olgp90qYZokA==
+  dependencies:
+    crypto-js "^4.2.0"
+
 "@motionone/animation@^10.15.1", "@motionone/animation@^10.16.3":
   version "10.16.3"
   resolved "https://registry.yarnpkg.com/@motionone/animation/-/animation-10.16.3.tgz#f5b71e27fd8b88b61f983adb0ed6c8e3e89281f9"
@@ -2463,6 +2470,22 @@
     "@web3auth/openlogin-adapter" "^4.3.0"
     ethers "^5.7.2"
 
+"@safe-global/onramp-kit@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@safe-global/onramp-kit/-/onramp-kit-1.4.0.tgz#3fe5dd379462ff0892804ceb64c511b7bd4187cd"
+  integrity sha512-vfzA/APdDEnrFL7uub+8VH4pUhOc0/zeAvYOYVnrKNX1FAlyaGjnEBem1zxryeFpRRVhHQMgOwxQsHPdK6BAzw==
+  dependencies:
+    "@ethersproject/abi" "^5.7.0"
+    "@ethersproject/address" "^5.7.0"
+    "@ethersproject/bytes" "^5.7.0"
+    "@ethersproject/hash" "^5.7.0"
+    "@monerium/sdk" "^2.3.0"
+    "@safe-global/api-kit" "^1.3.0"
+    "@safe-global/protocol-kit" "^1.3.0"
+    "@safe-global/safe-core-sdk-types" "^2.3.0"
+    "@stripe/crypto" "^0.0.4"
+    "@stripe/stripe-js" "^1.52.0"
+
 "@safe-global/protocol-kit@^1.3.0":
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/@safe-global/protocol-kit/-/protocol-kit-1.3.0.tgz#fb84a3797a4afc74ac7fc218e796037d6e3cc3cc"
@@ -2762,6 +2785,21 @@
     "@stablelib/keyagreement" "^1.0.1"
     "@stablelib/random" "^1.0.2"
     "@stablelib/wipe" "^1.0.1"
+
+"@stripe/crypto@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@stripe/crypto/-/crypto-0.0.4.tgz#51dbcb3750c75a6b8a6c8775381af82367359146"
+  integrity sha512-gcD/aG0N90ZrNVppWYf9ADPECptw6PVtF67VIeaFP7fhgd2NvNx8erkzlcvk3VIVSY+bZ6YGX7c7cASoySX74Q==
+
+"@stripe/stripe-js@^1.52.0":
+  version "1.54.2"
+  resolved "https://registry.yarnpkg.com/@stripe/stripe-js/-/stripe-js-1.54.2.tgz#0665848e22cbda936cfd05256facdfbba121438d"
+  integrity sha512-R1PwtDvUfs99cAjfuQ/WpwJ3c92+DAMy9xGApjqlWQMj0FKQabUAys2swfTRNzuYAYJh7NqK2dzcYVNkKLEKUg==
+
+"@stripe/stripe-js@^2.1.11":
+  version "2.1.11"
+  resolved "https://registry.yarnpkg.com/@stripe/stripe-js/-/stripe-js-2.1.11.tgz#cccef8eb27db75ec784945deaa882b0ed2a885b5"
+  integrity sha512-GRyInO+VPMjjgUzVPKpDtz+5s8JKssJ99uhWBGo09yxDQBb+bhkm6PxmVa8C+qsSd30JFO1Z+pgIJ0AMmmZJKg==
 
 "@surma/rollup-plugin-off-main-thread@^2.2.3":
   version "2.2.3"
@@ -6460,6 +6498,11 @@ crypto-browserify@^3.12.0:
     public-encrypt "^4.0.0"
     randombytes "^2.0.0"
     randomfill "^1.0.3"
+
+crypto-js@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/crypto-js/-/crypto-js-4.2.0.tgz#4d931639ecdfd12ff80e8186dba6af2c2e856631"
+  integrity sha512-KALDyEYgpY+Rlob/iriUtjV6d5Eq+Y191A5g4UqLAi8CyGP9N1+FdVbkc1SxKc2r4YAYqG8JzO2KGL+AizD70Q==
 
 crypto-random-string@^2.0.0:
   version "2.0.0"

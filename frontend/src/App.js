@@ -52,6 +52,7 @@ const wagmiConfig = createConfig({
 createWeb3Modal({ wagmiConfig, projectId, chains })
 
 function App() {
+
   return (
     <>
       <WagmiConfig config={wagmiConfig}>

@@ -143,7 +143,7 @@ function Safex () {
             console.log('User is not authenticated')
         })
     }
-    
+
     return(
         <>
 
