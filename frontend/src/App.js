@@ -11,7 +11,8 @@ import { alchemyProvider } from 'wagmi/providers/alchemy'
 import { CoinbaseWalletConnector } from 'wagmi/connectors/coinbaseWallet'
 import { createWeb3Modal } from '@web3modal/wagmi/react'
 import { jsonRpcProvider } from '@wagmi/core/providers/jsonRpc'
-
+import { Navigate, Route, Routes } from 'react-router-dom';
+import Book from './components/Book/Book';
 
 const chains = [arbitrum, mainnet, polygon, goerli, gnosisChiado];
 const projectId = '241bb4581819090d1602501778f5ff8f';
@@ -55,7 +56,12 @@ function App() {
     <>
       <WagmiConfig config={wagmiConfig}>
         <Nav />
-        <Search />
+        <Routes>
+          <Route exact path="/" element={ <> </>}> </Route>
+          <Route exact path="/Search" element={ <> <Search /></>}> </Route>
+          <Route exact path="/book" element={ <> <Book /></>}> </Route>
+          <Route path='*' element={ <Navigate to='/' /> }></Route>
+        </Routes>
       </WagmiConfig>
     </>
   );

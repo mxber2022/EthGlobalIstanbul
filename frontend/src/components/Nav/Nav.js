@@ -1,6 +1,13 @@
 import "./Nav.css";
+import { HashLink as Link } from 'react-router-hash-link';
 
 function Nav () {
+
+    const linkStyle = {
+        textDecoration: 'none', 
+        color: 'black',
+    };
+
     return(
         <>
             <nav className="nav">
@@ -9,13 +16,13 @@ function Nav () {
                 </div>
 
                 <div>
-                    <button>Book</button>
+                    <button><Link to="/book" style={linkStyle}>Book</Link> </button>
+                </div>
+       
+                <div>
+                <button> <Link to="/search" style={linkStyle}>List Parking</Link> </button>
                 </div>
 
-                <div>
-                    <button>List Parking</button>
-                </div>
-                
                 <div>
                     <w3m-button />
                 </div>              
