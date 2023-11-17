@@ -1,6 +1,6 @@
 import './App.css';
 import Nav from './components/Nav/Nav';
-import Profile from './components/Profile/Profile';
+import Search from './components/Search/Search';
 import { InjectedConnector } from 'wagmi/connectors/injected'
 import { configureChains, createConfig, WagmiConfig } from 'wagmi';
 import { arbitrum, gnosisChiado, goerli, mainnet, polygon } from 'wagmi/chains';
@@ -55,7 +55,7 @@ function App() {
     <>
       <WagmiConfig config={wagmiConfig}>
         <Nav />
-        <Profile />
+        <Search />
       </WagmiConfig>
     </>
   );
