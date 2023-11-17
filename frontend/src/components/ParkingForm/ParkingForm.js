@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './ParkingForm.css';
 
 const ParkingForm = () => {
   const [formData, setFormData] = useState({
@@ -8,7 +7,7 @@ const ParkingForm = () => {
     parkingImage: '',
     pricePerDay: '',
     acceptedCurrency: '',
-    earningStrategy: ''
+    earningStrategy: 'FreeStyleWithdrawal', // Default value
   });
 
   const handleChange = (e) => {
@@ -19,10 +18,38 @@ const ParkingForm = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // You can add your logic here to handle the form submission
+    /*
+        Logic to save data to database
+    */
     console.log('Form submitted:', formData);
+    try {
+        const response = await fetch('http://localhost:8006/addList', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            Name: formData.name,
+            Location: formData.location,
+            ParkingSpaceImageURL: formData.parkingImage,
+            PricePerDay: formData.pricePerDay,
+            AcceptedCurrency: formData.acceptedCurrency,
+            EarningStrategy: formData.earningStrategy,
+          }),
+        });
+  
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+  
+        const data = await response.json();
+        console.log('Link added successfully:', data);
+      } catch (error) {
+        console.error('Error adding link:', error);
+      }
+
   };
 
   return (
@@ -80,14 +107,16 @@ const ParkingForm = () => {
         />
 
         <label htmlFor="earningStrategy">Earning Strategy:</label>
-        <textarea
+        <select
           id="earningStrategy"
           name="earningStrategy"
           value={formData.earningStrategy}
           onChange={handleChange}
-          rows="4"
           required
-        ></textarea>
+        >
+          <option value="FreeStyleWithdrawal">FreeStyleWithdrawal</option>
+          <option value="CompoundStaking">CompoundStaking</option>
+        </select>
 
         <button type="submit">Submit</button>
       </form>
