@@ -58,12 +58,12 @@ function Nav () {
 
                 <Safex />
 
-                <div id="stripe-root" onClick={ramp}> OnRamp </div>
-
                 <div>
                     <w3m-button />
                 </div>              
             </nav>
+
+            <div id="stripe-root" onClick={ramp}> OnRamp </div>
         </>
     );
 }
