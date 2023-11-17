@@ -53,7 +53,7 @@ function Nav () {
                 </div>
        
                 <div>
-                    <button> <Link to="/search" style={linkStyle}>ListParking</Link> </button>
+                    <button> <Link to="/List" style={linkStyle}>ListParking</Link> </button>
                 </div>
 
                 <Safex />

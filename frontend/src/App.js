@@ -59,7 +59,7 @@ function App() {
         <Nav />
         <Routes>
           <Route exact path="/" element={ <> </>}> </Route>
-          <Route exact path="/Search" element={ <> <Search /></>}> </Route>
+          <Route exact path="/List" element={ <> <Search /></>}> </Route>
           <Route exact path="/book" element={ <> <Book /></>}> </Route>
           <Route path='*' element={ <Navigate to='/' /> }></Route>
         </Routes>

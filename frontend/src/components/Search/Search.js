@@ -6,6 +6,7 @@ import { useContractWrite, usePrepareContractWrite, useContractRead } from 'wagm
 import { useAccount } from 'wagmi';
 import { useDebounce } from 'use-debounce';
 import { ethers } from "ethers"
+import ParkingForm from '../ParkingForm/ParkingForm';
 
 function Search() {
 
@@ -13,7 +14,7 @@ function Search() {
     return (
         <>      
 
-          Seacrch
+          <ParkingForm/>
 
         </>
 
