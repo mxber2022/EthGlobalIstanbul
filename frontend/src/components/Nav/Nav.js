@@ -1,5 +1,6 @@
 import "./Nav.css";
 import { HashLink as Link } from 'react-router-hash-link';
+import Safex from "../Safex/Safex";
 
 function Nav () {
 
@@ -20,9 +21,10 @@ function Nav () {
                 </div>
        
                 <div>
-                <button> <Link to="/search" style={linkStyle}>List Parking</Link> </button>
+                    <button> <Link to="/search" style={linkStyle}>List Parking</Link> </button>
                 </div>
 
+                <Safex />
                 <div>
                     <w3m-button />
                 </div>              
