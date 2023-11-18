@@ -39,7 +39,7 @@ const ParkingSpaceList = () => {
       ) : (
         <div className="card-container">
           {parkingSpaces.map((space) => (
-            <div key={space.id} className="card">
+            <div key={space.Name} className="card">
               <strong>Name:</strong> {space.Name}
               <br />
               <strong>Location:</strong> {space.Location}
