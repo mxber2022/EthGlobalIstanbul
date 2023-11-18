@@ -149,9 +149,9 @@ function Safex () {
 
             {
                 loggedIn ? (
-                    <button onClick={web2logout}>Safe Logout</button>
+                    <button onClick={web2logout} className="mybuttonstyle">Safe Logout</button>
                 ) : (
-                    <button onClick={web2login}>Safe Login</button>
+                    <button onClick={web2login} className="mybuttonstyle">Safe Login</button>
                 )
             }
 

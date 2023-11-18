@@ -47,7 +47,7 @@ const limiter  = rateLimit({
     max: 10,
 });
 
-myMongoServer.use(limiter);
+//myMongoServer.use(limiter);
 
 /*
     This function helps to delay response.
@@ -58,7 +58,7 @@ const speedLimiter = slowDown({
     delayMs: 50000 // begin adding 50000 ms(50 second) of delay per request above 5:
 });
   
-myMongoServer.use(speedLimiter);
+//myMongoServer.use(speedLimiter);
 
 
 /* Accept request only in JSON format */

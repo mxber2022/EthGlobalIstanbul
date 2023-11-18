@@ -56,52 +56,51 @@ function Nav () {
     return(
         <>
             <nav className="nav">
-                <div>
-                    <h1>ParkedIn</h1>
-                </div>
 
-                <div>
-                    <button><Link to="/book" style={linkStyle}>Book</Link> </button>
-                </div>
-       
-                <div>
-                    <button> <Link to="/List" style={linkStyle}>ListParking</Link> </button>
-                </div>
+                <div className="leftx">
+                    <div>
+                        <h1>ParkedIn</h1>
+                    </div>
+                </div>                
 
-                <Safex />
 
-                <div>
-                    <w3m-button />
-                </div>              
+                <div className="rightx">
+                    <div>
+                        <button className="mybuttonstyle"><Link to="/book" style={linkStyle}>Book</Link> </button>
+                    </div>
+        
+                    <div>
+                        <button className="mybuttonstyle"> <Link to="/List" style={linkStyle}>ListParking</Link> </button>
+                    </div>
+
+                    <div>
+                        <button onClick={openModal} className="mybuttonstyle">OnRamp</button>
+                    </div>
+
+                    <div>
+                        <Safex />
+                    </div>
+
+                    <div className="makewc">
+                        <w3m-button />
+                    </div>   
+                </div>           
             </nav>
 
-            
-            {/* <div id="stripe-root" onClick={ramp}> OnRamp </div> */}
-
-
-            <div>
-                <button onClick={openModal}>Open OnRamp</button>
-            </div>
-
             <Modal style={{
-        content: {
-            width: '50%', // Adjust the width as needed
-            margin: 'auto', // Center the modal horizontally
-        },
-}}  isOpen={modalIsOpen} onRequestClose={closeModal} contentLabel="Stripe OnRamp Modal" >
+                    content: {
+                    width: '50%', // Adjust the width as needed
+                    margin: 'auto', // Center the modal horizontally
+                },
+            }}  isOpen={modalIsOpen} onRequestClose={closeModal} contentLabel="Stripe OnRamp Modal" >
                 <div>
                     <h2>Stripe OnRamp</h2>
                     <div id="stripe-root">
-                        OnRamp
+                        
                     </div>
                     <button onClick={closeModal}>Close Modal</button>
                 </div>
             </Modal>
-
-
-
-
-
 
         </>
     );

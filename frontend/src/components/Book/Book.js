@@ -18,7 +18,7 @@ function Book() {
     return (
         <>
 
-        <div>
+        <div className='book_'>
             <label htmlFor="locationInput">Enter Location: </label>
             <input type="text" id="locationInput" value={location} onChange={handleLocationChange} />
 
