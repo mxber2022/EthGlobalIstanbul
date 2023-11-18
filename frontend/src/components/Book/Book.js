@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import "./Book.css";
 import ParkingSpaceList from '../ParkingSpaceList/ParkingSpaceList';
+import Maps from '../Maps/Maps';
 
 function Book() {
 
@@ -30,6 +31,7 @@ function Book() {
 
         <ParkingSpaceList/>
 
+        <Maps/>
         </>
 
     
