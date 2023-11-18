@@ -13,6 +13,7 @@ import { createWeb3Modal } from '@web3modal/wagmi/react'
 import { jsonRpcProvider } from '@wagmi/core/providers/jsonRpc'
 import { Navigate, Route, Routes } from 'react-router-dom';
 import Book from './components/Book/Book';
+import PushNotification from './components/PushNotification/PushNotification';
 
 const chains = [arbitrum, mainnet, polygon, goerli, gnosisChiado];
 const projectId = '241bb4581819090d1602501778f5ff8f';
@@ -63,6 +64,7 @@ function App() {
           <Route exact path="/book" element={ <> <Book /></>}> </Route>
           <Route path='*' element={ <Navigate to='/' /> }></Route>
         </Routes>
+        <PushNotification />
       </WagmiConfig>
     </>
   );

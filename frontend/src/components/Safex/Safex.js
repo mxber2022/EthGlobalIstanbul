@@ -27,7 +27,6 @@ function Safex () {
     const web2provider = useRef("");
     const ASD = useRef("");
    // const { address, isConnected } = useAccount();
-    //const { provider } = useConnect();
 
     const clientId = "BMt8Val4uB41EFPQo2RWtZMKJV4SfERT2-8pc7LKlgO9jNBvkrGKASnnFqkEU1p8csKeTq2xCJTRoL4fyRxq-m8";
 
