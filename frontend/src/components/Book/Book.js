@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import "./Book.css";
+import ParkingSpaceList from '../ParkingSpaceList/ParkingSpaceList';
 
 function Book() {
 
@@ -26,6 +27,8 @@ function Book() {
             <label htmlFor="dateInput">Enter Date: </label>
             <input type="date" id="dateInput" value={date} onChange={handleDateChange} />
         </div> 
+
+        <ParkingSpaceList/>
 
         </>
 

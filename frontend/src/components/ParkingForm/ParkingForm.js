@@ -65,7 +65,7 @@ const ParkingForm = () => {
           onChange={handleChange}
           required
         />
-
+<br />
         <label htmlFor="location">Location:</label>
         <input
           type="text"
@@ -75,7 +75,7 @@ const ParkingForm = () => {
           onChange={handleChange}
           required
         />
-
+<br />
         <label htmlFor="parkingImage">Parking Space Image URL:</label>
         <input
           type="text"
@@ -85,7 +85,7 @@ const ParkingForm = () => {
           onChange={handleChange}
           required
         />
-
+<br />
         <label htmlFor="pricePerDay">Price Per Day:</label>
         <input
           type="number"
@@ -95,7 +95,7 @@ const ParkingForm = () => {
           onChange={handleChange}
           required
         />
-
+<br />
         <label htmlFor="acceptedCurrency">Accepted Currency:</label>
         <input
           type="text"
@@ -105,7 +105,7 @@ const ParkingForm = () => {
           onChange={handleChange}
           required
         />
-
+<br />
         <label htmlFor="earningStrategy">Earning Strategy:</label>
         <select
           id="earningStrategy"

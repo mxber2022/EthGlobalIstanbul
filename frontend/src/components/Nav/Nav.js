@@ -2,8 +2,20 @@ import "./Nav.css";
 import { HashLink as Link } from 'react-router-hash-link';
 import Safex from "../Safex/Safex";
 import {StripePack} from '@safe-global/onramp-kit'
+import { useState } from "react";
+import Modal from 'react-modal';
 
 function Nav () {
+
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+
+    const openModal = () => {
+        setModalIsOpen(true);
+        // Trigger OnRamp when modal opens
+        ramp();
+    };
+
+    const closeModal = () => setModalIsOpen(false);
 
     const linkStyle = {
         textDecoration: 'none', 
@@ -63,7 +75,34 @@ function Nav () {
                 </div>              
             </nav>
 
-            <div id="stripe-root" onClick={ramp}> OnRamp </div>
+            
+            {/* <div id="stripe-root" onClick={ramp}> OnRamp </div> */}
+
+
+            <div>
+                <button onClick={openModal}>Open OnRamp</button>
+            </div>
+
+            <Modal style={{
+        content: {
+            width: '50%', // Adjust the width as needed
+            margin: 'auto', // Center the modal horizontally
+        },
+}}  isOpen={modalIsOpen} onRequestClose={closeModal} contentLabel="Stripe OnRamp Modal" >
+                <div>
+                    <h2>Stripe OnRamp</h2>
+                    <div id="stripe-root">
+                        OnRamp
+                    </div>
+                    <button onClick={closeModal}>Close Modal</button>
+                </div>
+            </Modal>
+
+
+
+
+
+
         </>
     );
 }
