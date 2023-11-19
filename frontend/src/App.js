@@ -14,6 +14,8 @@ import { jsonRpcProvider } from '@wagmi/core/providers/jsonRpc'
 import { Navigate, Route, Routes } from 'react-router-dom';
 import Book from './components/Book/Book';
 import PushNotification from './components/PushNotification/PushNotification';
+import Exchange from './components/Exchange/Exchange';
+
 
 const chains = [arbitrum, mainnet, polygon, goerli, gnosisChiado];
 const projectId = '241bb4581819090d1602501778f5ff8f';
@@ -55,18 +57,18 @@ createWeb3Modal({ wagmiConfig, projectId, chains })
 function App() {
 
   return (
-    <>
-      <WagmiConfig config={wagmiConfig}>
-        <Nav />
-        <Routes>
-          <Route exact path="/" element={ <> </>}> </Route>
-          <Route exact path="/List" element={ <> <Search /></>}> </Route>
-          <Route exact path="/book" element={ <> <Book /></>}> </Route>
-          <Route path='*' element={ <Navigate to='/' /> }></Route>
-        </Routes>
-        <PushNotification />
-      </WagmiConfig>
-    </>
+      
+        <WagmiConfig config={wagmiConfig}>
+          <Nav />
+          <Routes>
+            <Route exact path="/" element={ <> </>}> </Route>
+            <Route exact path="/List" element={ <> <Search /></>}> </Route>
+            <Route exact path="/book" element={ <> <Book /></>}> </Route>
+            <Route exact path="/Exchange" element={ <> <Exchange /></>}> </Route>
+            <Route path='*' element={ <Navigate to='/' /> }></Route>
+          </Routes>
+          <PushNotification />
+        </WagmiConfig>
   );
 }
 
