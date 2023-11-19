@@ -77,7 +77,7 @@ function Nav () {
                     </div>
 
                     <div>
-                    <PushNotification/>
+                        <PushNotification/>
                     </div>
 
                 </div>                

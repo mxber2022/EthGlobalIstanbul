@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import "./ParkingForm.css";
 import image3 from "./Car_Park_Background2.png";
+import { abi } from "./abi";
+import { useContractWrite, usePrepareContractWrite } from 'wagmi';
+import { parseEther } from 'viem';
 
 const ParkingForm = () => {
   const [formData, setFormData] = useState({
@@ -54,10 +57,27 @@ const ParkingForm = () => {
 
   };
 
+  const CONTRACT_ADDRESS = "0xA2c1e8332Ce1724a8307c881f2e52e0342af4FDb";
+
+  const { config } = usePrepareContractWrite({
+    address: CONTRACT_ADDRESS,
+    abi: abi,
+    functionName: 'approveDelegation',
+    args: ["0x7199D548f1B30EA083Fe668202fd5E621241CC89", "1000"],
+  });
+
+  const { data, isLoading, isSuccess, isError, write } = useContractWrite(config);
+
+  const CA = "0x26ca51Af4506DE7a6f0785D20CD776081a05fF6d";
+
   return (
     <>
           <div className="container" style={{ backgroundImage: `url(${image3})` }}></div>
           <h2>Parking Space Information</h2>
+
+          <button onClick={() => write()}>Provide Collateral</button>
+          <button onClick={() => write()}>Borrow</button>
+
           <div className="form-container">
               <label htmlFor="name">Name:</label>
               <input
