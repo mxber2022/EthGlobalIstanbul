@@ -67,7 +67,6 @@ function App() {
             <Route exact path="/Exchange" element={ <> <Exchange /></>}> </Route>
             <Route path='*' element={ <Navigate to='/' /> }></Route>
           </Routes>
-          <PushNotification />
         </WagmiConfig>
   );
 }

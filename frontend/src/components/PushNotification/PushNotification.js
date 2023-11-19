@@ -52,7 +52,7 @@ const PushNotification = () => {
 
   return (
     <>
-        <button onClick={activatePn}>ActivatePushNotification</button>
+        <button onClick={activatePn} className="mybuttonstyle">PushActivate</button>
     </>
   );
 };
