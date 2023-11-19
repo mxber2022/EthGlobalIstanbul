@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import "./Book.css";
 import ParkingSpaceList from '../ParkingSpaceList/ParkingSpaceList';
-import Maps from '../Maps/Maps';
+import image1 from "./Search_Icon.png";
+import image2 from "./Car_Park_Background.jpeg";
+
 
 function Book() {
 
@@ -17,25 +19,34 @@ function Book() {
     };
 
     return (
-        <>
-
-        <div className='book_'>
-            <label htmlFor="locationInput">Enter Location: </label>
-            <input type="text" id="locationInput" value={location} onChange={handleLocationChange} />
-
-            <br />
-
-            <label htmlFor="dateInput">Enter Date: </label>
-            <input type="date" id="dateInput" value={date} onChange={handleDateChange} />
-        </div> 
-
-        <ParkingSpaceList/>
-
-        <Maps/>
-        </>
-
-    
-    )
+      <>
+            <div className="container" style={{ backgroundImage: `url(${image2})` }}>
+              <div className="input-container" >
+                  <label className="label" htmlFor="locationInput">Location</label>
+                  <label className="label" htmlFor="dateInput" >Date</label>
+                  <div></div>
+                  <input 
+                      type="text" 
+                      id="locationInput" 
+                      value={location} 
+                      onChange={handleLocationChange} 
+                      placeholder='Enter Location' 
+                  />
+                  <input 
+                      type="date" 
+                      id="dateInput" 
+                      value={date} 
+                      onChange={handleDateChange} 
+                      placeholder='Pick the date' 
+                  />
+                  <button className="image-button">
+                      <img src={image1} alt="Button Icon" />
+                  </button>
+              </div>
+            </div>
+          <ParkingSpaceList/>
+      </>
+  );
 }
 
 export default Book;

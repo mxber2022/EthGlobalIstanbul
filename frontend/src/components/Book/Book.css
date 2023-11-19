@@ -1,4 +1,76 @@
 .book_ {
-    padding-top: 50px;
-    padding-left: 35px;
+    background-image: url('./Car_Park_Background.jpeg'); /* Update with your image path */
+    background-size:0%; /* Cover the entire area of the element */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; 
+}
+
+.container {
+    display: flex;
+    justify-content:center;/* Center horizontally */
+    align-items:end; /* Center vertically if needed */
+    height: 100vh; 
+}
+
+.input-container {
+    display: grid;
+    grid-template-columns: 6fr 6fr 1fr; /* Two columns of equal width */
+    grid-template-rows: auto auto; /* Two rows, height as needed */
+    gap: 10px; 
+    position: absolute;
+    bottom: 0px;
+    justify-content: space-between; /* Space out the children */
+    align-items: center; /* Align items vertically */
+    width: 70%;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #493825a3;
+}
+
+.label {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    color: #ffffff; /* Or any color you prefer */
+    font-weight: bold; /* Make labels stand out */
+    margin-top: 5px;
+    margin-bottom: 5px; /* Space between label and input */
+    text-align:center;
+}
+
+input[type='text'], input[type='date'] {
+    width: 100%; /* Full width */
+    padding: 12px 20px; /* Padding inside the input */
+    margin: 8px 0; /* Margin around the input */
+    display: inline-block; /* Inline block layout */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Box sizing to include padding in width */
+}
+
+input[type='text']:focus, input[type='date']:focus {
+    border-color: #007bff; /* Border color on focus */
+    outline: none; /* Remove default focus outline */
+}
+
+::placeholder {
+    color: #000000; /* Placeholder text color */
+}
+
+.image-button {
+    background-color: #E2076A; /* Button background color */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 10px; /* Adjust as needed */
+    transition: box-shadow 0.1s; 
+}
+
+.image-button img {
+    height: 20px; /* Adjust as needed */
+    width: auto;
+}
+
+.image-button:active {
+    box-shadow: 0 5px 15px #E2076A;
 }
