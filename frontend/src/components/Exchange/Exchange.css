@@ -1,0 +1,13 @@
+.exchange_ {
+    background-image: url('./Car_Park_Background3.png'); /* Update with your image path */
+    background-size:0%; /* Cover the entire area of the element */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; 
+}
+
+.container {
+    display: flex;
+    justify-content:center;/* Center horizontally */
+    align-items:end; /* Center vertically if needed */
+    height: 100vh; 
+}
