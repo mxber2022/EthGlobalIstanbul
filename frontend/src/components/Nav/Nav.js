@@ -4,6 +4,7 @@ import Safex from "../Safex/Safex";
 import {StripePack} from '@safe-global/onramp-kit'
 import { useState } from "react";
 import Modal from 'react-modal';
+import logo from './Logo.png'
 
 function Nav () {
 
@@ -59,22 +60,27 @@ function Nav () {
 
                 <div className="leftx">
                     <div>
-                        <h1>ParkedIn</h1>
+                        <img src={logo} class="resize-image"></img>
                     </div>
-                </div>                
 
-
-                <div className="rightx">
                     <div>
                         <button className="mybuttonstyle"><Link to="/book" style={linkStyle}>Book</Link> </button>
                     </div>
         
                     <div>
-                        <button className="mybuttonstyle"> <Link to="/List" style={linkStyle}>ListParking</Link> </button>
+                        <button className="mybuttonstyle"> <Link to="/List" style={linkStyle}>List Parking</Link> </button>
                     </div>
 
                     <div>
-                        <button onClick={openModal} className="mybuttonstyle">OnRamp</button>
+                        <button className="mybuttonstyle"> <Link to="/Exchange" style={linkStyle}>Exchange</Link> </button>
+                    </div>
+
+                </div>                
+
+
+                <div className="rightx">
+                    <div>
+                        <button onClick={openModal} className="mybuttonstyle">Top Wallet up</button>
                     </div>
 
                     <div>
@@ -89,8 +95,8 @@ function Nav () {
 
             <Modal style={{
                     content: {
-                    width: '50%', // Adjust the width as needed
-                    margin: 'auto', // Center the modal horizontally
+                    //width: '50%', // Adjust the width as needed
+                    //margin: 'auto', // Center the modal horizontally
                 },
             }}  isOpen={modalIsOpen} onRequestClose={closeModal} contentLabel="Stripe OnRamp Modal" >
                 <div>
