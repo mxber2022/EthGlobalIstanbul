@@ -1,0 +1,32 @@
+.parkingForm_ {
+    background-image: url('./Car_Park_Background2.png'); /* Update with your image path */
+    background-size:auto; /* Cover the entire area of the element */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; 
+}
+
+.container {
+    display: flex;
+    justify-content:center;/* Center horizontally */
+    align-items:end; /* Center vertically if needed */
+    height: 100vh; 
+}
+
+.form-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Two columns of equal width */
+    grid-template-rows: auto ;
+    padding-top: 10px;
+    width: 70%;
+    justify-content:center;/* Center horizontally */
+    align-items:center; /* Center vertically if needed */
+    gap: 10px;
+}
+
+.button {
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 10px; /* Adjust as needed */
+    transition: box-shadow 0.1s; 
+}
