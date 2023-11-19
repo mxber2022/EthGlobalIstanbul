@@ -5,6 +5,7 @@ import {StripePack} from '@safe-global/onramp-kit'
 import { useState } from "react";
 import Modal from 'react-modal';
 import logo from './Logo.png'
+import PushNotification from "../PushNotification/PushNotification";
 
 function Nav () {
 
@@ -73,6 +74,10 @@ function Nav () {
 
                     <div>
                         <button className="mybuttonstyle"> <Link to="/Exchange" style={linkStyle}>Exchange</Link> </button>
+                    </div>
+
+                    <div>
+                    <PushNotification/>
                     </div>
 
                 </div>                
