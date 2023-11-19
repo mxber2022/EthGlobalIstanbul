@@ -1,0 +1,1 @@
+(self.webpackChunkethglobalistanbul=self.webpackChunkethglobalistanbul||[]).push([[856],{86401:()=>{},784:()=>{},69494:()=>{}}]);
